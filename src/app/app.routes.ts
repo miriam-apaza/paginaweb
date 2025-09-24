@@ -1,11 +1,14 @@
-import { Component } from '@angular/core';
 import { Routes } from '@angular/router';
-import path from 'path';
-import { title } from 'process';
+import { Layout } from './layout/layout';
 import { About } from './about/about';
 import { Home } from './home/home';
 
 export const routes: Routes = [
+    {
+        path:'',
+        component:Layout,
+        children:[
+             
     {
         path:'',
         component:Home,
@@ -16,4 +19,8 @@ export const routes: Routes = [
         component:About,
         title:'Acerca de'
     }
+
+        ]
+    }
+ 
 ];
